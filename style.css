@@ -27,10 +27,6 @@ nav{
 .logo{
   width: 180px;
   border-radius: 80px;
-}
-.left-logo{
-  display: inline-block;
-  font-size: 12px;
 } 
 nav ul li{
   display: inline-block;
@@ -53,4 +49,6 @@ nav ul li a::after{
   bottom: -6px;
   transition: 0.5s;
 }
- 
+nav ul li a:hover::after{
+  width: 100%;
+}
