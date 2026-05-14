@@ -25,10 +25,13 @@ nav{
   flex-wrap: wrap;
 }
 .logo{
-  width: 160px;
+  width: 180px;
   border-radius: 80px;
 }
-
+.left-logo{
+  display: inline-block;
+  font-size: 12px;
+} 
 nav ul li{
   display: inline-block;
   list-style: none;
@@ -42,10 +45,12 @@ nav ul li a{
 }
 nav ul li a::after{
   content: '';
-  width: 100%;
+  width: 0;
   height: 3px;
   background: #ff004f;
   position: absolute;
   left: 0;
   bottom: -6px;
+  transition: 0.5s;
 }
+ 
