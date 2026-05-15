@@ -33,7 +33,7 @@
     <div class="container">
       <div class="row">
         <div class="about-col-1">
-          <img src="portfolio-images/aboutSection.jpg" alt="">
+          <img src="portfolio-images/imageAboutSection.jpg" alt="">
         </div>
         <div class="about-col-2">
           <h1 class="subtitle">About Me</h1>
@@ -84,7 +84,8 @@
       for(tabcontent of tabcontents){
         tabcontent.classList.remove("active-tab");
       }
-      event.currentTarget.classList.add("active-link")
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab")
     }
   </script>
 </body>

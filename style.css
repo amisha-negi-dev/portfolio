@@ -88,11 +88,16 @@ nav ul li a:hover::after{
   flex-basis: 35%;
 }
 .about-col-1 img{
+  margin-top: 7px;
    width: 100%;
-   border-radius: 15px;
+   border-radius: 12px;
 }
 .about-col-2{
   flex-basis: 60%;
+}
+.about-col-2 p{
+   font-size: 15px;
+   margin-top: 12px;
 }
 .subtitle{
   font-size: 60px;
