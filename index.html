@@ -27,6 +27,66 @@
       </div>
     </div>
   </div>  
+
+  <!-- ---------ABOUT--------  -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="portfolio-images/aboutSection.jpg" alt="">
+        </div>
+        <div class="about-col-2">
+          <h1 class="subtitle">About Me</h1>
+          <p>I am Amisha Negi, a designer and developer who loves creating digital experiences that are both beautiful and functional. With a passion for blending creativity and technology, I enjoy turning ideas into designs that feel modern, intuitive, and impactful. My work reflects attention to detail, clean aesthetics, and a focus on user‑friendly solutions. I believe design is not just about visuals but about telling a story and solving problems, and development is the tool that brings those ideas to life. Whether it’s crafting a sleek interface or building a responsive website, I strive to deliver work that leaves a lasting impression and connects meaningfully with people.</p>
+
+          <div class="tab-titles">
+            <p class= "tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p> 
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+              <li><span>Web Development</span><br>Web Development</li>
+              <li><span>App Development</span><br>Building Android/iOS apps</li>  
+            </ul>
+          </div>
+
+           <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>Skills</span><br>UI/UX design and web/app interface practice</li>
+              <li><span>Learning</span><br>Building responsive websites with HTML, CSS, and JavaScript</li>
+              <li><span>Goals</span><br>Exploring mobile app development and expanding technical expertise</li>    
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>BCA</span><br>Bachelor of Computer Applications - Completed</li>
+              <li><span>MCA</span><br>Master of Computer Applications - Ongoing</li>
+              <li><span>Future Learning</span><br>Expanding expertise in advanced frameworks and app development</li>  
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    const tablinks = document.getElementsByClassName("tab-links");
+    const tabcontents = document.getElementsByClassName("tab-contents"); 
+
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link")
+    }
+  </script>
 </body>
 </html>
  
