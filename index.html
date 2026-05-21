@@ -16,11 +16,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         <h1><span>A</span>misha</h1>
         <!-- <img src="portfolio-images/logo.png" alt="" class="logo"> -->
         <ul id="sidemenu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
           <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
         </ul>
         <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -155,12 +155,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
               <a href="cv/link" download class="btn btn2">Download CV</a>
           </div>
           <div class="contact-right">
-            <form>
-              <input type="text" name="Name" placeholder="Your Name" required>
+            <form name = "contact-form">
+              <input type="text" name="name" placeholder="Your Name" required>
               <input type="text" name="email" placeholder="Your Email" required>
-              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+              <textarea name="message" rows="6" placeholder="Your Message"></textarea>
               <button type="submit" class="btn btn2">Submit</button>
             </form>
+            <span id="msg"></span>
           </div>
         </div>
       </div>
@@ -194,6 +195,26 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     function closemenu(){
       sidemenu.style.right = "-200px";
     }
+  </script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbynydRVcDT6swbeRj9-otfHyUvj-mVsPbI95mhBGc9aC9iAZ9jw3RJnQJ-OvweURByg3A/exec'
+    const form = document.forms['contact-form']
+    const msg = document.getElementById('msg')
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => response.json())
+        .then(response => {
+          msg.innerHTML = "Message sent successfully"
+          setTimeout(function(){
+            msg.innerHTML = ""
+          },2000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
   </script>
 </body>
 </html>

@@ -4,6 +4,9 @@
  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 body{
   background: #080808;
   color: rgb(231, 230, 228);
@@ -287,6 +290,7 @@ nav ul li a:hover::after{
   margin-right: 15px;
   display: inline-block;
   transition: transform 0.5s;
+  color: rgba(129, 56, 136, 0.884);
 }
 .social-icons a:hover{
   color: orange;
@@ -393,5 +397,10 @@ nav .fa-solid{
    }
    .copyright{
     font-size: 14px;
-   }
+   } 
+}
+#msg{
+  color: #61b752;
+  margin-top: -40px;
+  display: block;
 }
