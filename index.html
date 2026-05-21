@@ -15,13 +15,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       <nav> 
         <h1><span>A</span>misha</h1>
         <!-- <img src="portfolio-images/logo.png" alt="" class="logo"> -->
-        <ul>
+        <ul id="sidemenu">
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">Portfolio</a></li>
           <li><a href="#">Contact</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
         </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
       </nav>
       <div class="header-text">
         <p>UI/UX Designer</p>
@@ -39,7 +41,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           <img src="portfolio-images/imageAboutSection.jpg" alt="">
         </div>
         <div class="about-col-2">
-          <h1 class="subtitle">About Me</h1>
+          <h1 class="sub-title">About Me</h1>
           <p>I am Amisha Negi, a designer and developer who loves creating digital experiences that are both beautiful and functional. With a passion for blending creativity and technology, I enjoy turning ideas into designs that feel modern, intuitive, and impactful. My work reflects attention to detail, clean aesthetics, and a focus on user‑friendly solutions. I believe design is not just about visuals but about telling a story and solving problems, and development is the tool that brings those ideas to life. Whether it’s crafting a sleek interface or building a responsive website, I strive to deliver work that leaves a lasting impression and connects meaningfully with people.</p>
 
           <div class="tab-titles">
@@ -181,6 +183,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       }
       event.currentTarget.classList.add("active-link");
       document.getElementById(tabname).classList.add("active-tab")
+    } 
+  </script>
+  <script>
+    const sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+      sidemenu.style.right = "0";
+    }
+    function closemenu(){
+      sidemenu.style.right = "-200px";
     }
   </script>
 </body>
